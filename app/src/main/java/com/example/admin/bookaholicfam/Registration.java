@@ -18,6 +18,7 @@ public class Registration extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
         Log.i("before creating object","ok");
         mydb=new DatabaseHelper(this);
+        //db=openOrCreateDatabase("Repository", MODE_PRIVATE, null);
         Log.i("After creating object","ok");
 
     }
@@ -58,15 +59,17 @@ public class Registration extends AppCompatActivity {
         else {
                 Log.i("Before insert","ok");
             //db=mydb.getWritableDatabase();
+            //db.execSQL("CREATE TABLE user_details(MBNO TEXT PRIMARY KEY,FNAME TEXT,LNAME TEXT,UNAME TEXT ,LOC TEXT,PASS TEXT)");
+            //mydb.onCreate(db);
              Boolean result=   mydb.insertData(mbs,ed1s,ed2s,ed3s,lcs,p2s);
              Log.i("After insert","ok");
              if(result==true)
              {
-                 Toast.makeText(this,"Account successfully created",Toast.LENGTH_SHORT);
+                 Toast.makeText(this,"Account successfully created",Toast.LENGTH_LONG);
              }
              else
              {
-                 Toast.makeText(this,"Account not created",Toast.LENGTH_SHORT);
+                 Toast.makeText(this,"Account not created",Toast.LENGTH_LONG);
              }
             /*try {
                     SQLiteDatabase myDatabase = openOrCreateDatabase("Repository", MODE_PRIVATE, null);

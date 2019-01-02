@@ -65,11 +65,11 @@ public class Registration extends AppCompatActivity {
              Log.i("After insert","ok");
              if(result==true)
              {
-                 Toast.makeText(this,"Account successfully created",Toast.LENGTH_LONG);
+                 Toast.makeText(this,"Account successfully created",Toast.LENGTH_LONG).show();
              }
              else
              {
-                 Toast.makeText(this,"Account not created",Toast.LENGTH_LONG);
+                 Toast.makeText(this,"Account not created",Toast.LENGTH_LONG).show();
              }
             /*try {
                     SQLiteDatabase myDatabase = openOrCreateDatabase("Repository", MODE_PRIVATE, null);
